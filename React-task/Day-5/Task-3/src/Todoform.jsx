@@ -12,7 +12,7 @@ function Todoform() {
   const [editId,setEditId]=useState(null);
   const [filter,setFilter]=useState('All');
 
-  
+
   const handleClick=()=>{
     if (data.trim() === '' || descriptn.trim() === '') {
       return;}
@@ -23,7 +23,7 @@ function Todoform() {
           id:todos.length+1,
           Name:data,
           Description:descriptn,
-          status:'Not Completed'
+          status:status
         }
           setTodos([...todos,newTodoitem]);
            }   
@@ -34,7 +34,7 @@ function Todoform() {
            return{...todo,
             Name:data,
             Description:descriptn,
-            status:'Not Completed' };
+            status:status };
           }
           return todo;
         });
