@@ -15,37 +15,62 @@ function App() {
   return (
     <>
     <Router>
-      <div>
-      <nav className="navbar">
-        <div className="container">
-  <div className="logo"> <a href="https://www.guvi.in/blog/"><img src='./image/Guvi-blog-logo.png'alt='Guvi-blog-logo'></img></a></div>
- 
-  <div class="navbar-nav">
-      <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Features</a>
-      <a class="nav-item nav-link" href="#">Pricing</a>
-      <a class="nav-item nav-link" href="#">Disabled</a>
+      <div className='head'>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="#">GUVI</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <a className="nav-link "  href="#">Home</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Courses</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Live classes</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link " href="#">Login</a>
+        </li>
+      </ul>
     </div>
-    
- 
-</div>
-        </nav>
+  </div>
+</nav>
 
       </div>
-      <header className="header">
-  <div className="container1">
-    <a href='https://www.guvi.in/'><img src='./image/blog-header.png' height='172' width='1096'></img></a>
+     
+<nav  className="navbar navbar-expand-lg bg-body-tertiary"> 
+<div className="container-fluid">
    
-  </div>
-</header>
-<nav className="navbar navbar-expand-lg navbar-light bg-light">        
- <div className="navbar-nav mr-auto align">
-            <Link className ="nav-link" to="/">All</Link>
-            <Link className ="nav-link" to="/fullstackdevelopment">Full Stack Development</Link>
-            <Link className ="nav-link" to="/datascience">Data Science</Link>
-            <Link className ="nav-link" to="/cybersecurity">Cyber Security</Link>
-            <Link className ="nav-link" to="/career">Career</Link>
-</div>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+         <Link to="/"> <a className="nav-link "  href="#">All</a></Link>
+        </li>
+       <li className="nav-item">
+       <Link to="/fullstackdevelopment"><a className="nav-link" href="#">Full Stack Development</a></Link>
+        </li>
+        <li className="nav-item">
+        <Link to="/datascience"><a className="nav-link" href="#">Data Science</a></Link>
+        </li>
+        <li className="nav-item">
+        <Link to="/cybersecurity"><a className="nav-link" href="#">Cyber Security</a></Link>
+        </li>
+        
+        <li className="nav-item">
+        <Link to="/career"><a className="nav-link" href="#">Career</a></Link>
+        </li>
+      </ul>
+    </div>
+  </div>       
+ 
 </nav>
 
       <Routes>
