@@ -33,47 +33,47 @@ app.post("/book", async (req, res) => {
   // READ - list of books
   
   app.get("/books", async (req, res) => {
-    try {
-      const books = await Book.find();
-      res.status(201).send(books);
-    } catch (error) {
-      res.status(400).send(error.message);
-    }
-  });
+  try {
+  const books = await Book.find();
+res.status(201).send(books);
+  } catch (error) {
+  res.status(400).send(error.message);
+}
+});
   
-  app.get("/book/:id", async (req, res) => {
-    try {
-      const book = await Book.findById(req.params.id);
-      res.status(201).send(book);
-    } catch (error) {
-      res.status(400).send(error.message);
-    }
-  });
+ app.get("/book/:id", async (req, res) => {
+ try {
+ const book = await Book.findById(req.params.id);
+ res.status(201).send(book);
+ } catch (error) {
+ res.status(400).send(error.message);
+ }
+ });
   
-  // UPDATE - Add a new book
+ // UPDATE - Add a new book
   
   app.put("/book/:id", async (req, res) => {
     try {
-      const book = await Book.findByIdAndUpdate(req.params.id, req.body, {
-        new: false,
-      });
-      res.status(201).send(book);
-    } catch (error) {
-      res.status(400).send(error.message);
-    }
+    const book = await Book.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+   });
+   res.status(201).send(book);
+   } catch (error) {
+   res.status(400).send(error.message);
+   }
   });
   
-  //  Delete book
+  //Delete book
   
   app.delete("/book/:id", async (req, res) => {
-    try {
-      const result = await Book.findByIdAndDelete(req.params.id);
-      if (result) res.status(201).send({ message: "Book deleted successfully!" });
-      else res.status(404).send("Book not found");
-    } catch (error) {
-      res.status(400).send(error.message);
-    }
-  });
+  try {
+  const result = await Book.findByIdAndDelete(req.params.id);
+ if (result) res.status(201).send({ message: "Book deleted successfully!" });
+ else res.status(404).send("Book not found");
+ } catch (error) {
+ res.status(400).send(error.message);
+ }
+ });
   
 
 
